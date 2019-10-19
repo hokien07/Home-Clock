@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activitys.ClockActivity">
+
+
+    <TextClock
+        android:layout_marginTop="16dp"
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/clock"
+        android:layout_centerHorizontal="true"
+        android:timeZone="GMT+0700"
+        android:format24Hour="( EE ) dd/MM/yyyy"
+        android:format12Hour="@null"
+        android:textSize="30sp"/>
+
+
+    <TextClock
+        android:layout_below="@+id/date"
+        android:textColor="@color/clock"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/clock"
+        android:textStyle="bold"
+        android:timeZone="GMT+0700"
+        android:format24Hour="k:mm:ss"
+        android:format12Hour="@null"
+        android:textSize="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/viewPager"
+        android:layout_width="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clock"/>
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/progress"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:text="battery 80%"
+        android:rotation="-90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+
+</RelativeLayout>
